@@ -7,13 +7,13 @@ Mathematical analysis of quicksort shows that, on average, the algorithm takes O
 
 ```
 function swap(items, firstIndex, secondIndex){
-    let temp = items[firstIndex]
+    var temp = items[firstIndex]
     items[firstIndex] = items[secondIndex]
     items[secondIndex] = temp
 }
 
 function partition(items, left, right) {
-    let pivot   = items[Math.floor((right + left) / 2)],
+    var pivot   = items[Math.floor((right + left) / 2)],
         i       = left,
         j       = right
     while (i <= j) {
@@ -33,7 +33,7 @@ function partition(items, left, right) {
 }
 
 function quickSort(items, left, right) {
-    let index
+    var index
     if (items.length > 1) {
         index = partition(items, left, right);
         if (left < index - 1) {
@@ -50,7 +50,7 @@ function quickSort(items, left, right) {
 To use:
 
 ```
-let arr= [10, 100, 1, 1000, 5, 50, 500, 5000]
+var arr= [10, 100, 1, 1000, 5, 50, 500, 5000]
 console.log(quickSort(arr, 0, arr.length - 1))
 
 ```
