@@ -3,5 +3,5 @@
 ### Sorted alphabetically
 
 [Binary Search](https://github.com/mgechev/javascript-algorithms/blob/master/src/searching/binary-search.md)<br />
-[Bubble Sort](https://github.com/dabit3/javascript-algorithms/blob/master/src/bubble-sort.md)
+[Bubble Sort](https://github.com/dabit3/javascript-algorithms/blob/master/src/bubble-sort.md)<br />
 [Quick Sort](https://github.com/dabit3/javascript-algorithms/blob/master/src/quick-sort.md)
