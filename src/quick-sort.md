@@ -7,33 +7,33 @@ Our quicksort algorithm takes two functions, swap and partition, also documented
 
 ```
 function swap(items, firstIndex, secondIndex){
-    var temp = items[firstIndex]
+    let temp = items[firstIndex]
     items[firstIndex] = items[secondIndex]
     items[secondIndex] = temp
 }
 
 function partition(items, left, right) {
-    var pivot   = items[Math.floor((right + left) / 2)],
+    let pivot   = items[Math.floor((right + left) / 2)],
         i       = left,
-        j       = right;
+        j       = right
     while (i <= j) {
         while (items[i] < pivot) {
-            i++;
+            i++
         }
         while (items[j] > pivot) {
-            j--;
+            j--
         }
         if (i <= j) {
-            swap(items, i, j);
-            i++;
-            j--;
+            swap(items, i, j)
+            i++
+            j--
         }
     }
-    return i;
+    return i
 }
 
 function quickSort(items, left, right) {
-    var index;
+    let index
     if (items.length > 1) {
         index = partition(items, left, right);
         if (left < index - 1) {
@@ -43,14 +43,14 @@ function quickSort(items, left, right) {
             quickSort(items, index, right);
         }
     }
-    return items;
+    return items
 }
 ```
 
 To use:
 
 ```
-var arr= [10, 100, 1, 1000, 5, 50, 500, 5000]
+let arr= [10, 100, 1, 1000, 5, 50, 500, 5000]
 console.log(quickSort(arr, 0, arr.length - 1))
 
 ```

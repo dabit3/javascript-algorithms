@@ -1,6 +1,6 @@
 ```
 function swap(items, firstIndex, secondIndex){
-    let temp = items[firstIndex]
+    var temp = items[firstIndex]
     items[firstIndex] = items[secondIndex]
     items[secondIndex] = temp
 }
@@ -11,7 +11,6 @@ function swap(items, firstIndex, secondIndex){
 function bubbleSort(items) {
     var len = items.length,
         i, j, stop
-    
     for (i=0; i < len; i++){
         for (j=0, stop=len-i; j < stop; j++){
             if (items[j] > items[j+1]){
@@ -19,8 +18,7 @@ function bubbleSort(items) {
             }
         }
     }
-    
-    return items
+    return items;
 }
 ```
 
