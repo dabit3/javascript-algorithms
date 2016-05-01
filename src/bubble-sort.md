@@ -47,3 +47,10 @@ function bubbleSort(items) {
     return items
 }
 ```
+To use:
+
+```
+var arr= [10, 100, 1, 1000, 5, 50, 500, 5000]
+console.log(bubbleSort(arr))
+
+```
