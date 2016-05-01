@@ -37,7 +37,7 @@ function HashTable(obj) {
    
     this.removeItem = function(key) {
         if (this.hasItem(key)) {
-            previous = this.items[key];
+            var previous = this.items[key];
             this.length--;
             delete this.items[key];
             return previous;
@@ -90,14 +90,19 @@ var h = new HashTable({one: 1, two: 2, three: 3, "i'm no 4": 4});
 console.log('h', h)
 
 console.log('length: ' + h.length);
-
 console.log('value of key "one": ', h.getItem('one'));
 console.log('has key "foo"? ', h.hasItem('foo'));
 console.log('previous value of key "foo": ',  h.setItem('foo', 'bar'));
+console.log('h', h)
+console.log('length: ', h.length);
 console.log('length after setItem: ', h.length);
 console.log('value of key "foo": ', h.getItem('foo'));
 console.log('has key "foo"? ', h.hasItem('foo'));
 console.log('value of key 4: ',  h.getItem("i'm no 4"));
+console.log('length before remove item: ', h.length);
+h.removeItem("three")
+console.log('h after remove item', h)
+console.log('length after remove item: ', h.length);
 h.clear();
 console.log('length: ', h.length);
 
