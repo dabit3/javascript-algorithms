@@ -89,7 +89,7 @@ var h = new HashTable({one: 1, two: 2, three: 3, "i'm no 4": 4});
 
 console.log('h', h)
 
-console.log('original length: ' + h.length);
+console.log('length: ' + h.length);
 
 console.log('value of key "one": ', h.getItem('one'));
 console.log('has key "foo"? ', h.hasItem('foo'));
@@ -99,6 +99,6 @@ console.log('value of key "foo": ', h.getItem('foo'));
 console.log('has key "foo"? ', h.hasItem('foo'));
 console.log('value of key 4: ',  h.getItem("i'm no 4"));
 h.clear();
-console.log('length after clear: ', h.length);
+console.log('length: ', h.length);
 
 ```
