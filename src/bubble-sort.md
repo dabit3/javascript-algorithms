@@ -1,8 +1,8 @@
 ```
 function swap(items, firstIndex, secondIndex){
-    var temp = items[firstIndex];
-    items[firstIndex] = items[secondIndex];
-    items[secondIndex] = temp;
+    let temp = items[firstIndex]
+    items[firstIndex] = items[secondIndex]
+    items[secondIndex] = temp
 }
 ```
 #### Implementation #1
@@ -10,15 +10,17 @@ function swap(items, firstIndex, secondIndex){
 ```
 function bubbleSort(items) {
     var len = items.length,
-        i, j, stop;
+        i, j, stop
+    
     for (i=0; i < len; i++){
         for (j=0, stop=len-i; j < stop; j++){
             if (items[j] > items[j+1]){
-                swap(items, j, j+1);
+                swap(items, j, j+1)
             }
         }
     }
-    return items;
+    
+    return items
 }
 ```
 
@@ -27,16 +29,16 @@ function bubbleSort(items) {
 ```
 function bubbleSort(items) {
     var len = items.length,
-        i, j;
+        i, j
 
     for (i=len-1; i >= 0; i--){
         for (j=len-i; j >= 0; j--){
             if (items[j] < items[j-1]){
-                swap(items, j, j-1);
+                swap(items, j, j-1)
             }
         }
     }
 
-    return items;
+    return items
 }
 ```
