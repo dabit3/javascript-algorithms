@@ -91,9 +91,9 @@ bh.push(5)
 bh.push(34)
 bh.push(16)
 bh.pop()
-console.log("number in heap: " + bh.size())
+console.log('number in heap: ' + bh.size())
 console.log('bh', bh.get())
-console.log("number in heap: " + bh.size())
+console.log('number in heap: ' + bh.size())
 ```
 
 Implementation: Custom comparison operator (smallest to largest)
@@ -108,7 +108,7 @@ bh2.push(9)
 bh2.push(990)
 bh2.push(100)
 
-console.log("number in heap2: " + bh2.size())
+console.log('number in heap2: ' + bh2.size())
 console.log('bh2', bh2.get())
 
 ```
