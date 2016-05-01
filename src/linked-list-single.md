@@ -1,60 +1,56 @@
 From [Wikipedia](https://en.wikipedia.org/wiki/Linked_list):
 
-In computer science, a linked list is a linear collection of data elements, called nodes pointing to the next node by means of a pointer. It is a data structure consisting of a group of nodes which together represent a sequence. Under the simplest form, each node is composed of data and a reference (in other words, a link) to the next node in the sequence; more complex variants add additional links. This structure allows for efficient insertion or removal of elements from any position in the sequence.:
+In computer science, a linked list is a linear collection of data elements, called nodes pointing to the next node by means of a pointer. It is a data structure consisting of a group of nodes which together represent a sequence. Under the simplest form, each node is composed of data and a reference (in other words, a link) to the next node in the sequence more complex variants add additional links. This structure allows for efficient insertion or removal of elements from any position in the sequence.:
 
 ```
 function Node(data) {
-    this.data = data;
-    this.next = null;
+    this.data = data
+    this.next = null
 }
  
 function List() {
-    this._length = 0;
-    this.head = null;
+    this._length = 0
+    this.head = null
 }
  
 List.prototype.add = function(value) {
     var node = new Node(value),
-        currentNode = this.head;
+        currentNode = this.head
  
-    // 1st use-case: an empty list
     if (!currentNode) {
-        this.head = node;
-        this._length++;
+        this.head = node
+        this._length++
  
-        return node;
+        return node
     }
  
-    // 2nd use-case: a non-empty list
     while (currentNode.next) {
-        currentNode = currentNode.next;
+        currentNode = currentNode.next
     }
  
-    currentNode.next = node;
+    currentNode.next = node
  
-    this._length++;
+    this._length++
      
-    return node;
-};
+    return node
+}
  
 List.prototype.searchNodeAt = function(position) {
     var currentNode = this.head,
         length = this._length,
         count = 1,
-        message = {failure: 'Failure: non-existent node in this list.'};
+        message = {failure: 'Failure: non-existent node in this list.'}
  
-    // 1st use-case: an invalid position
     if (length === 0 || position < 1 || position > length) {
-        throw new Error(message.failure);
+        throw new Error(message.failure)
     }
  
-    // 2nd use-case: a valid position
     while (count < position) {
-        currentNode = currentNode.next;
-        count++;
+        currentNode = currentNode.next
+        count++
     }
-    return currentNode;
-};
+    return currentNode
+}
  
 List.prototype.remove = function(position) {
     var currentNode = this.head,
@@ -63,38 +59,36 @@ List.prototype.remove = function(position) {
         message = {failure: 'Failure: non-existent node in this list.'},
         beforeNodeToDelete = null,
         nodeToDelete = null,
-        deletedNode = null;
+        deletedNode = null
  
-    // 1st use-case: an invalid position
     if (position < 0 || position > length) {
-        throw new Error(message.failure);
+        throw new Error(message.failure)
     }
  
-    // 2nd use-case: the first node is removed
     if (position === 1) {
-        this.head = currentNode.next;
-        deletedNode = currentNode;
-        currentNode = null;
-        this._length--;
+        this.head = currentNode.next
+        deletedNode = currentNode
+        currentNode = null
+        this._length--
          
-        return deletedNode;
+        return deletedNode
     }
  
-    // 3rd use-case: any other node is removed
     while (count < position - 1) {
-        beforeNodeToDelete = currentNode;
-        nodeToDelete = currentNode.next;
+        beforeNodeToDelete = currentNode
+        nodeToDelete = currentNode.next
         currentNode = nodeToDelete
-        count++;
+        count++
     }
     
-    beforeNodeToDelete.next = nodeToDelete.next;
-    deletedNode = nodeToDelete;
-    nodeToDelete = null;
-    this._length--;
+    beforeNodeToDelete.next = nodeToDelete.next
+    deletedNode = nodeToDelete
+    nodeToDelete = null
+    this._length--
  
-    return deletedNode;
-};
+    return deletedNode
+}
+
 ```
 To use:
 
