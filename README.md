@@ -2,4 +2,4 @@
 
 ### Sorted alphabetically
 
-[Binary Search]()
+[Binary Search](https://github.com/mgechev/javascript-algorithms/blob/master/src/searching/binarysearch.js)
