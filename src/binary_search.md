@@ -15,7 +15,6 @@ function findMid(items, value) {
     }
     middle = Math.floor((stopIndex + startIndex) / 2)
   }
-
   return (items[middle] !== value) ? 'false' : 'true: ' + middle  
 }
 
