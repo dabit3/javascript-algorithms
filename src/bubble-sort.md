@@ -1,3 +1,7 @@
+
+
+**Our implementation takes one function, swap:**
+
 ```
 function swap(items, firstIndex, secondIndex){
     var temp = items[firstIndex]
