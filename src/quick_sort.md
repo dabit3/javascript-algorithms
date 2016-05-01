@@ -3,6 +3,7 @@ Quicksort is a comparison sort, meaning that it can sort items of any type for w
 
 Mathematical analysis of quicksort shows that, on average, the algorithm takes O(n log n) comparisons to sort n items. In the worst case, it makes O(n2) comparisons, though this behavior is rare.
 
+Our quicksort algorithm takes two functions, swap and partition, also documented here:
 
 ```
 function swap(items, firstIndex, secondIndex){
@@ -44,7 +45,11 @@ function quickSort(items, left, right) {
     }
     return items;
 }
+```
 
+To use:
+
+```
 var arr= [10, 100, 1, 1000, 5, 50, 500, 5000]
 console.log(quickSort(arr, 0, arr.length - 1))
 
