@@ -90,11 +90,12 @@ var h = new HashTable({one: 1, two: 2, three: 3, "i'm no 4": 4});
 console.log('h', h)
 
 console.log('length: ' + h.length);
+
 console.log('value of key "one": ', h.getItem('one'));
 console.log('has key "foo"? ', h.hasItem('foo'));
-console.log('previous value of key "foo": ',  h.setItem('foo', 'bar'));
-console.log('h', h)
-console.log('length: ', h.length);
+h.setItem('foo', 'bar')
+h.setItem('loggedIn', false)
+console.log('h after setting new keys', h)
 console.log('length after setItem: ', h.length);
 console.log('value of key "foo": ', h.getItem('foo'));
 console.log('has key "foo"? ', h.hasItem('foo'));
